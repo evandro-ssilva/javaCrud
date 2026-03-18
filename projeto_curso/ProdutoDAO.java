@@ -44,5 +44,4 @@ public class ProdutoDAO{
             System.err.println("erro ao apagar os registros do banco");
         }
     }
-
 }

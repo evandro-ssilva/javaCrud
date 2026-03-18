@@ -11,11 +11,11 @@ public class CriarTabelaProdutos {
 
         //query sql tabela produtos
         String sql = "create table produtos(" +
-        "id_produto," +
-        "nome," +
-        "quantidade," +
-        "preco," +
-        "status)";
+        "id_produto integer primary key," +
+        "nome text not null," +
+        "quantidade integer," +
+        "preco real," +
+        "status text)";
 
         //executando a query
         stmt.execute(sql);
@@ -24,7 +24,7 @@ public class CriarTabelaProdutos {
             
         } catch (SQLException e) {
             System.err.println("Erro ao criar tabela produtos " + e.getMessage());
-            
+
         }
 
     }
